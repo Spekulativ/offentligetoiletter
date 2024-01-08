@@ -24,27 +24,13 @@ map.locate({ setView: true, maxZoom: 16 });
 
 //Implementation of geoJSON
 
-var options = {
-  maxZoom: 24,
-  tolerance: 100,
-  debug: 0,
-  style: (properties) => {
-    if (properties.toilet_betegnelse = "Toilet med handicapadgang") {
-      return  {fillColor:"#1EB3F0",color:"##007F00"
-  
 
-    };
-    } else {
-      return  {fillColor:"#007F00",color:"##007F00 "};
-    }
-  }
-};
 //1 - Ringkøbing-Skjern
 
-var vtLayer = L.geoJson.vt(dataRing, options).addTo(map);
+L.geoJson(dataRing).addTo(map);
 
 
-var vtLayer2 = L.geoJson.vt(dataKK, options).addTo(map);
+L.geoJson(dataKK, options).addTo(map);
 
 //1 - Ringkøbing-Skjern
 
